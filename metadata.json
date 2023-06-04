@@ -1,0 +1,27 @@
+{
+    "name": "decaturmakers-octoprintpi",
+    "version": "0.1.0",
+    "author": "decaturmakers",
+    "summary": "Puppet module for configuring and managing Raspberry Pis running OctoPrint and related software.",
+    "license": "MIT",
+    "source": "https://github.com/DecaturMakers/puppet-octoprintpi",
+    "project_page": "https://github.com/DecaturMakers/puppet-octoprintpi",
+    "issues_url": "https://github.com/DecaturMakers/puppet-octoprintpi/issues",
+    "dependencies": [
+      { "name":"puppetlabs/stdlib","version_requirement":">= 8.2.0 < 9.0.0" }
+    ],
+    "operatingsystem_support": [
+      {
+        "operatingsystem": "Debian",
+        "operatingsystemrelease": [
+          "11"
+        ]
+      }
+    ],
+    "requirements": [
+      {
+        "name": "puppet",
+        "version_requirement": ">= 5.5.0 < 9.0.0"
+      }
+    ]
+  }
