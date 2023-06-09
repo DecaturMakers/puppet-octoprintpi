@@ -4,7 +4,7 @@ Puppet module for configuring and managing Raspberry Pis running OctoPrint and r
 
 ## What's Here?
 
-Lorem itsum.
+Lorem ipsum.
 
 ### Why not OctoPi?
 
@@ -41,6 +41,8 @@ Note that the following instructions assume you're working on a Linux (or maybe 
     ```
 1. Mount the second (root) partition from the SD card (e.g. `mount /dev/sdX2 /mnt/temp`) and `cd` to where it's mounted
    1. `cat <path to>/wpa_supplicant.conf > etc/wpa_supplicant/wpa_supplicant.conf`
+   1. `echo octotest > etc/hostname`
+   1. `sed -i "/127.0.1.1/s/raspberrypi/octotest/" etc/hosts`
    1. Unmount the partition (`sync; sync; umount /mnt/temp`)
 1. Unplug the SD card from your computer and plug it in to the Pi.
 1. If this is a new Pi and you don't know its MAC address, plug the Pi's wired Ethernet port into your laptop, power up the pi, and fire up Wireshark. When the Pi starts sending DHCPDISCOVER messages, get its MAC address.
