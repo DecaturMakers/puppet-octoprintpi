@@ -14,6 +14,12 @@ Lorem ipsum.
 2. There's no official upgrade process other than "back everything up, re-image, restore everything".
 3. We're already managing a bunch of Pis for other purposes, and from a maintenance and update standpoint, it's easiest to just have them all running the same image.
 
+## Limitations and ToDo's
+
+* Raspberry Pi cameras are currently not supported, as we're going to be using more robust USB webcams
+  * If we want raspicam enabled we need to enable that in `config.txt` like how it's [done in OctoPi](https://github.com/guysoft/CustomPiOS/blob/devel/src/modules/raspicam/start_chroot_script)
+* OctoPi 1.0.0 includes FFMPEG HLS streaming but doesn't use it by default. As such, we don't even include it.
+
 ## Setting Up a New Pi
 
 First, obtain a Raspberry Pi 3B or newer and a MicroSD card of 32GB or larger (preferably 64GB or 128GB).

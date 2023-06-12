@@ -17,4 +17,27 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
+echo
+echo "------------------------------------------------------------"
+echo
+echo "You may now open a web browser on your local network and "
+echo "navigate to any of the following addresses to access "
+echo "OctoPrint:"
+echo
+for name in $_NAME;
+do
+    echo " http://$name.local"
+done
+
+for ip in $(hostname -I);
+do
+    echo "    http://$ip"
+done
+
+echo
+echo "https is also available, with a self-signed certificate."
+echo
+echo "------------------------------------------------------------"
+echo
+
 exit 0
